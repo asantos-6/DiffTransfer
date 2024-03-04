@@ -95,7 +95,7 @@ def main():
     logdir = log_dir + 'ATT_STARNET_NORM_diffusion_timbre_transfer_' + datetime.datetime.now().strftime(
         "%Y%m%d-%H%M%S") + '5000__'+conditioning_instrument+'_to_'+desired_instrument
 
-    # Each instrument is the same since track names are duplicatedk
+    # Each instrument is the same since track names are duplicated
 
     tracks_full = os.listdir(dataset_train_path)
     cond_tracks = [track for track in tracks_full if track.split('.')[-2]==instruments_name[1]]
