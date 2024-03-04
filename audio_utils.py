@@ -82,25 +82,25 @@ weight_decay = 1e-4
 
 
 # Handle Paths
-dataset_train_path = 'dataset/dataset_timbre_transfer/train'
-instruments_name = ['violin','saxophone']
-checkpoint_path = "checkpoints/diffusion_model_timbre_transfer_saxophone_to_violin_20230305-150304"
+# dataset_train_path = 'dataset/dataset_timbre_transfer/train'
+# instruments_name = ['violin','saxophone']
+# checkpoint_path = "checkpoints/diffusion_model_timbre_transfer_saxophone_to_violin_20230305-150304"
 
-checkpoint_path = "checkpoints/diffusion_model_timbre_transfer_saxophone_to_violin_20230309-170705"
-
-
-
-# Each instrument is the same since track names are duplicated
-track_names = os.listdir(os.path.join(dataset_train_path,instruments_name[0]))
-track_names.sort()
-# Let's do violin to saxophone
-track_paths_trans = [[os.path.join(dataset_train_path,instruments_name[0],track_name),os.path.join(dataset_train_path,instruments_name[1],track_name)]  for track_name in track_names]
+# checkpoint_path = "checkpoints/diffusion_model_timbre_transfer_saxophone_to_violin_20230309-170705"
 
 
-val_perc = 0.2
-n_tracks_train = len(track_paths_trans) - int(np.floor(val_perc*len(track_paths_trans)))
-train_tracks_paths = track_paths_trans[:n_tracks_train]
-val_tracks_paths = track_paths_trans[n_tracks_train:]
+
+# # Each instrument is the same since track names are duplicated
+# track_names = os.listdir(os.path.join(dataset_train_path,instruments_name[0]))
+# track_names.sort()
+# # Let's do violin to saxophone
+# track_paths_trans = [[os.path.join(dataset_train_path,instruments_name[0],track_name),os.path.join(dataset_train_path,instruments_name[1],track_name)]  for track_name in track_names]
+
+
+# val_perc = 0.2
+# n_tracks_train = len(track_paths_trans) - int(np.floor(val_perc*len(track_paths_trans)))
+# train_tracks_paths = track_paths_trans[:n_tracks_train]
+# val_tracks_paths = track_paths_trans[n_tracks_train:]
 
 #train_tracks_paths, val_tracks_paths = train_tracks_paths[:64], val_tracks_paths[:64],
 #audio_path = train_tracks_paths[200]
